@@ -3,9 +3,10 @@ import React, { useEffect } from 'react';
 
 const Camera = () => {
     const video = React.useRef(null);
+    var constraints = {video: {width: video.current.offsetWidth, height: video.current.offsetHeight}};
 
     const initCamera = () =>{
-        window.navigator.mediaDevices.getUserMedia({ video: true })
+        window.navigator.mediaDevices.getUserMedia(constraints)
         .then(stream => {
             video.current.srcObject = stream;
             video.current.onloadedmetadata = (e) => {

@@ -38,7 +38,7 @@ import { Form } from "./form";
       {showForm && <Form close={() => setShowForm(false)}/>}
         <div id="container">
           <div className="row m-0">
-          <div className="col-8 col-xl-8 left">
+          <div className="col-xl-8 left">
             <Camera/>
   
                 <div className="feature-box-icon ">
@@ -53,7 +53,7 @@ import { Form } from "./form";
               </div>
             
 
-            <div className=" col-4 col-xl-4 right">
+            <div className="col-xl-4 right">
               {/* start section */}
 <section className="wow animate__fadeIn pt-3">
   <div className="container p-4 pt-2">
