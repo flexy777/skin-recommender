@@ -33,7 +33,7 @@ export const Form = (props) =>{
                     <input id="newsletter-off" className="d-none" type="checkbox" name="newsletter-off" />
                     <label htmlFor="newsletter-off" className="text-small"><span />Don't show this popup again</label>
                   </div>
-                  <div className="col-12 col-sm-5 cover-background order-1 order-sm-2 xs-h-150px" style={{backgroundImage: 'url("images/newsletter-popup-img-01.jpg")'}}>
+                  <div className="col-12 col-sm-5 cover-background order-1 order-sm-2 xs-h-150px" style={{backgroundImage: 'url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/flawlessskin-1589384044.png")'}}>
                     <button title="Close (Esc)" type="button" className="mfp-close"
                       onClick={()=>props.close()}
                     >×</button>
