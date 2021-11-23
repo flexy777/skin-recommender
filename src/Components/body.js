@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import Camera from "./camera";
 import { Form } from "./form";
 
