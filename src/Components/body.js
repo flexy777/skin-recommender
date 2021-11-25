@@ -1,12 +1,34 @@
-import React, { useState } from "react";
-import Camera from "./camera";
+import React, { useState, useRef } from "react";
+// import Cam from "./cam";
+// import Camera from "./camera";
+import Webcam from "react-webcam";
 import Defects from "./Defects";
 import { Form } from "./form";
 import Products from "./products";
 
- const Body = () => {
+const videoConstraints = {
+  width: 540,
+  facingMode: "user"
+};
+
+const Body = () => {
+  const webcamRef = useRef(null);
+  const [url, setUrl] = React.useState(null);
+
+  const capturePhoto = React.useCallback(async () => {
+  const imageSrc = webcamRef.current.getScreenshot();
+    setUrl(imageSrc);
+  }, [webcamRef]);
+
+  const onUserMedia = (e) => {
+    console.log(e);
+  };
+
+
   const [showForm, setShowForm] = useState(true)
   
+
+
   
     return (
       <>
@@ -14,14 +36,28 @@ import Products from "./products";
         <div id="container">
           <div className="row m-0">
           <div className="col-6 col-xl-8 left">
-            <Camera/>
+            
+          <Webcam
+        ref={webcamRef}
+        audio={false}
+        screenshotFormat="image/jpeg"
+        videoConstraints={videoConstraints}
+        onUserMedia={onUserMedia}
+      />
+      {/* <button onClick={capturePhoto}>Capture</button>
+      <button onClick={() => setUrl(null)}>Refresh</button> */}
+      {url && (
+        <div>
+          <img src={url} alt="Screenshot" />
+        </div>
+      )}
   
                 <div className="feature-box-icon ">
                   <div className="buttons">
-                <button  className="shutter btn  btn-gradient-magenta-orange d-table d-lg-inline-block lg-margin-15px-bottom md-margin-auto-lr" > 
+                <button onClick={capturePhoto} className="shutter btn  btn-gradient-magenta-orange d-table d-lg-inline-block lg-margin-15px-bottom md-margin-auto-lr" > 
                 <i className="line-icon-Camera-2 icon-medium " /></button>
-                {/* <button  className="retake btn btn-gradient-magenta-orange d-table d-lg-inline-block lg-margin-15px-bottom md-margin-auto-lr" >
-                  <i className="line-icon-Back icon-large " /></button> */}
+                <button onClick={() => setUrl(null)} className="retake btn btn-gradient-magenta-orange d-table d-lg-inline-block lg-margin-15px-bottom md-margin-auto-lr" >
+                  <i className="line-icon-Refresh icon-large " /></button>
                 </div>
               </div>
               
