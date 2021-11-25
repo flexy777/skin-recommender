@@ -5,13 +5,15 @@ import Webcam from "react-webcam";
 import Defects from "./Defects";
 import { Form } from "./form";
 import Products from "./products";
+import AllCameras from "./allCamera";
+const Body = () => {
 
 const videoConstraints = {
   width: 540,
   facingMode: "user"
 };
 
-const Body = () => {
+
   const webcamRef = useRef(null);
   const [url, setUrl] = React.useState(null);
 
