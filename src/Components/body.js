@@ -64,18 +64,18 @@ const Body = () => {
 
             <div className="feature-box-icon ">
               <div className="buttons">
-                {!url &&
-                <button
+                {!url ?
+               ( <button
                   onClick={capturePhoto}
                   className="shutter btn  btn-gradient-magenta-orange d-table d-lg-inline-block lg-margin-15px-bottom md-margin-auto-lr"
                 >
                 
                   <i className="line-icon-Camera-2 icon-medium " />
 
-                </button>
-                ||
-                <button onClick={() => setUrl(null)} className="retake btn btn-gradient-magenta-orange d-table d-lg-inline-block lg-margin-15px-bottom md-margin-auto-lr" >
-                  <i className="line-icon-Arrow-Around icon-large " /></button>
+                </button>)
+                :
+                (<button onClick={() => setUrl(null)} className="retake btn btn-gradient-magenta-orange d-table d-lg-inline-block lg-margin-15px-bottom md-margin-auto-lr" >
+                  <i className="line-icon-Arrow-Around icon-large " /></button>)
                   }
               </div>
             </div>
