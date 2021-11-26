@@ -4,7 +4,7 @@ import Webcam from "react-webcam";
 import Defects from "./Defects";
 import { Form } from "./form";
 import Products from "./products";
-import AllCameras from "./allCamera";
+// import AllCameras from "./allCamera";
 const Body = () => {
 
 const videoConstraints = {
@@ -33,7 +33,7 @@ const videoConstraints = {
   
     return (
       <>
-      <AllCameras/> 
+      {/* <AllCameras/>  */}
       {showForm && <Form close={() => setShowForm(false)}/>}
         <div id="container">
           <div className="row m-0">
