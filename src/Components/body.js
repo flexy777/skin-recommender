@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 // import Cam from "./cam";
-// import Camera from "./camera";
 import Webcam from "react-webcam";
 import Defects from "./Defects";
 import { Form } from "./form";
@@ -34,6 +33,7 @@ const videoConstraints = {
   
     return (
       <>
+      <AllCameras/> 
       {showForm && <Form close={() => setShowForm(false)}/>}
         <div id="container">
           <div className="row m-0">
