@@ -34,8 +34,8 @@ export const Form = (props) =>{
                      
                     </form>
                 
-                    <input id="newsletter-off" className="d-none text-center" type="checkbox" name="newsletter-off" />
-                    <label htmlFor="newsletter-off" className="text-small text-center"><span />Don't show this popup again</label>
+                    {/* <input id="newsletter-off" className="d-none text-center" type="checkbox" name="newsletter-off" />
+                    <label htmlFor="newsletter-off" className="text-small text-center"><span />Don't show this popup again</label> */}
                    
                   </div>
                   <div className="col-12 col-sm-5 cover-background order-1 order-sm-2 xs-h-150px" style={{backgroundImage: 'url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/flawlessskin-1589384044.png")'}}>

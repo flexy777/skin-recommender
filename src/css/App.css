@@ -111,3 +111,17 @@ video{
 input{
   border-radius: 20px;
 }
+.preview-image-container{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: #232326;
+}
+.preview-image-box{
+  margin: auto;
+width: max-content;
+/* margin-top: 8.8px; */
+border-radius: 10px;
+}
